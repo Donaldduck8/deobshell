@@ -4,8 +4,8 @@ import shutil
 from unittest import TestCase
 
 from main import deob
-from modules.logger import set_log_level, LogLevel
-from modules.utils import make_directory, delete_directory
+from .modules.logger import set_log_level, LogLevel
+from .modules.utils import make_directory, delete_directory
 
 
 def diff_text(a, b):

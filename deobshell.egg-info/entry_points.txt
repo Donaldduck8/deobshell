@@ -1,0 +1,2 @@
+[console_scripts]
+allah = deobshell.main:main
