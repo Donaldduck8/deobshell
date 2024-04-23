@@ -1,5 +1,0 @@
-Metadata-Version: 2.1
-Name: deobshell
-Version: 0.1.0
-Summary: A tool for deobfuscating shellcode as part of malware analysis.
-License-File: LICENSE
