@@ -6,6 +6,8 @@ import xml.etree.ElementTree as ET
 
 from ..modules.logger import log_info, log_debug, log_err
 
+HERE = os.path.dirname(os.path.abspath(__file__))
+PARENT = os.path.dirname(HERE)
 
 def read_ast_file(filename):
     log_info(f"Reading input AST: {filename}")
@@ -36,7 +38,7 @@ def create_ast_file(ps1_file, use_docker):
             "pwsh", "-File", "/Get-AST.ps1", "-ps1", "/scriptdir/" + ps1_file.name]
     else:
         cmd = ["PowerShell", "-ExecutionPolicy", "Unrestricted", "-File",
-            os.path.abspath(os.path.join("tools", "Get-AST.ps1")),
+            os.path.abspath(os.path.join(PARENT, "tools", "Get-AST.ps1")),
             "-ps1", os.path.abspath(ps1_file)]
 
     result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
