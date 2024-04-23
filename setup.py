@@ -11,4 +11,8 @@ setup(
         ],
     },
     include_package_data=True,
+    package_data={
+        # Include all files in the tools directory
+        '': ['tools/*'],
+    },
 )
