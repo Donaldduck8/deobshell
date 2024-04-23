@@ -71,6 +71,10 @@ def format(ps1_file):
 
 
 def main():
+    welcome()
+    set_log_level(LogLevel.DEBUG)
+    parse_args()
+
     cmd = OPTIONS.setdefault("command", None)
     if cmd == "deob":
         deob(OPTIONS['input'])
@@ -81,8 +85,4 @@ def main():
 
 
 if __name__ == '__main__':
-    print("YAH")
-    welcome()
-    set_log_level(LogLevel.DEBUG)
-    parse_args()
     main()
