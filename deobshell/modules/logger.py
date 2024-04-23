@@ -30,7 +30,7 @@ def set_log_file(filename):
         log_warn("Unable to create %s, using standard ouput")
 
 
-def shrink(s, max_length=100):
+def shrink(s, max_length=10000):
     return s if len(s) <= max_length else s[:max_length] + "..."
 
 
